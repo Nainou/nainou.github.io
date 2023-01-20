@@ -3,65 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>My First Webpage</title>
-    <style>
-        body {
-          background-color: #9a0d14;
-        }
-        p {
-            color: #ffffff;
-          font-size: 14px;
-      font-family: Courier New, sans-serif;
-      text-align: center;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-        }
-        body {
-            background-image: url('nam.png');
-        background-repeat: repeat;
-        background-position: left;
-        animation: scroll-background 20s linear infinite, zoomin 20s ease-in-out infinite, rotate 20s linear infinite;
-            background-blend-mode: hard-light;
-        }  @keyframes scroll-background {
-        from {
-          background-position: 0 0;
-        }
-        to {
-          background-position: 0 100%;
-        }
-      }
-      
-      </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    
-<h1 style="color: #ffffff;">Welcome to my first webpage</h1>
-    
-    <p style="width:400px;">The walls of the asylum whispered secrets in the dead of night, driving the inmates mad with terror. The patients, plagued by hallucinations and delusions, could not escape the feeling that they were being watched. They heard voices coming from the walls, speaking in a language they could not understand. But they knew it was not the language of the living. It was the language of the dead.
-        <br><br>
-        As the days passed, the patients began to notice a strange rot consuming the asylum. It crept up the walls like a disease, consuming everything in its path. The rot was not just physical, it was mental too. It consumed the minds of the patients, driving them to madness and despair.
-        
-        The staff of the asylum tried to contain the spread of the rot, but it was too powerful. They could not understand its origins or how to stop it. They watched in horror as their patients succumbed to the rot, becoming nothing more than shells of their former selves.
-        <br><br>
-        
-        And all the while, the walls continued to speak, their voices growing louder and more insistent. The patients realized that the rot was not just consuming the asylum, it was consuming the entire world. Humanity was being consumed by the rot, and there was nothing they could do to stop it.
-        <br><br>
-        
-        They were trapped in the asylum, trapped in their own minds, and they knew they would never escape. The rot would consume them all, and they would become nothing more than whispers on the walls, forever trapped in the language of the dead.
-        <br><br>
-        
-        As the last of the patients succumbed to the rot, the walls fell silent. The asylum was empty, consumed by the rot, and the world outside was nothing but darkness and despair. The rot had consumed all of humanity, and there was no hope left.
-        <br><br>
-        
-        All that remained was the whispers of the dead, trapped forever in the walls of the asylum. And in the darkness, something stirred, something ancient and malevolent, that had been waiting for the rot to consume the world. And it knew that it was only a matter of time before it would be free to consume the rest of the universe 
-    </p>
-  
-        <audio  autoplay>
-    <source src="hah.mp3" type="audio/mp3">
-   
-</audio>
-
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <img class="image" src="nam.png" draggable="false"/>
+      <img class="image" src="nam.png"draggable="false"/>
+      <img class="image" src="nam.png"draggable="false"/>
+      <img class="image" src="nam.png"draggable="false"/>
+    </div>
+    <div class="center-text" draggable="false">I LOVE ANABOLIC STEROIDS!</div>
+<script src="main.js"></script>
 </body>
 </html>
