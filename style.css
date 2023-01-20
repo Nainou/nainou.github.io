@@ -8,6 +8,7 @@
           overflow: hidden;
 
         }
+        
         #image-track > .image {
             width: 40vmin;
             height: 56vmin;
@@ -33,4 +34,17 @@
             font-family: badgrunge;
             transform: translate(-50%, -50%);
             pointer-events: none;
+          }
+          .fixed-header {
+            position: fixed;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            opacity: 0.3;
+          }
+          .fixed-header img{
+            display: block;
+            margin: 0 auto; 
+            width: 300px;;
           }
