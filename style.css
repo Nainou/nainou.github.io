@@ -48,3 +48,37 @@
             margin: 0 auto; 
             width: 300px;;
           }
+
+
+
+          
+#grid > .image {
+  width: 11vmin;
+  height: 11vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+
+#grid > .image2 {
+  width: 11vmin;
+  height: 11vmin;
+  opacity: 0.5;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+#grid > .image3 {
+  width: 11vmin;
+  height: 11vmin;
+  opacity: 0;
+  object-position: 100% 50%;
+}
+
+#grid {
+  position:absolute;
+  display:grid;
+
+  grid-template-columns: repeat(8, 1fr);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
