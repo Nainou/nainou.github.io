@@ -1,93 +1,159 @@
 @font-face { font-family: badgrunge; src: url('BAD GRUNGE.ttf'); } 
 @font-face { font-family: badgrunge; font-weight: bold; src: url('BAD GRUNGE.ttf');}
-     body {
-          height: 100vh;
-          width: 100vh;
-          background-color: black;
-          margin: 0rem;
-          overflow: hidden;
 
+
+     body {
+        height: 100vh;
+        background-color: black;
+        margin: 0rem;
+        overflow: hidden;
+
+      }
+      #image-track > .image {
+          width: 40vmin;
+          height: 56vmin;
+          object-fit: cover;
+          object-position: 100% 50%;
+      }
+      #image-track {
+          display: flex;
+          gap: 4vmin;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(0%, -50%);
+          pointer-events: none;
+      }
+      .center-text {
+          color: white;
+          font-size: 6em;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-family: badgrunge;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+        .fixed-header {
+          position: fixed;
+          bottom: 50px;
+          left: 0;
+          width: 100%;
+          z-index: 1;
+          opacity: 0.3;
+          pointer-events: none;
+        }
+        .fixed-header img{
+          display: block;
+          margin: 0 auto; 
+          width: 300px;;
+        }
+        #grid > .image {
+        width: 11vmin;
+        height: 11vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+        }
+        #grid > .image2 {
+        width: 11vmin;
+        height: 11vmin;
+        opacity: 0.5;
+        object-fit: cover;
+        object-position: 100% 50%;
+        }
+        #grid > .image3 {
+        width: 11vmin;
+        height: 11vmin;
+        opacity: 0;
+        object-position: 100% 50%;
+        }
+        #grid {
+        position:absolute;
+        display:grid;
+        grid-template-columns: repeat(8, 1fr);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+       .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border: 3px solid #6D6D6D;
+        padding: 19px;
+        width: 48%;
         }
         
-        #image-track > .image {
-            width: 40vmin;
-            height: 56vmin;
-            object-fit: cover;
-            object-position: 100% 50%;
-        }
-        #image-track {
-            display: flex;
-            gap: 4vmin;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(0%, -50%);
-            pointer-events: none;
-        }
-        .center-text {
-            color: white;
-            font-size: 6em;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            font-family: badgrunge;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-          }
-          .fixed-header {
-            position: fixed;
-            bottom: 50px;
-            left: 0;
-            width: 100%;
-            z-index: 1;
-            opacity: 0.3;
-          }
-          .fixed-header img{
+        .frame{
+        text-align: center;
+        padding: 19px;
+        font-family: 'Times New Roman', Times, serif;
+         }
+        a.anchor {
             display: block;
-            margin: 0 auto; 
-            width: 300px;;
-          }
-
-
-
-          
-#grid > .image {
-  width: 11vmin;
-  height: 11vmin;
-  object-fit: cover;
-  object-position: 100% 50%;
-}
-
-#grid > .image2 {
-  width: 11vmin;
-  height: 11vmin;
-  opacity: 0.5;
-  object-fit: cover;
-  object-position: 100% 50%;
-}
-#grid > .image3 {
-  width: 11vmin;
-  height: 11vmin;
-  opacity: 0;
-  object-position: 100% 50%;
-}
-
-#grid {
-  position:absolute;
-  display:grid;
-
-  grid-template-columns: repeat(8, 1fr);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.container {
-  display: flex;
-  gap: 4vmin;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+            visibility: hidden;
+            padding-top: 20px;
+        }
+        .links {
+            top: 40px;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical; 
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                    flex-flow: column;
+            padding: 0.2em 0.6em 0.4em 0.6em;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+        .links .profile img {
+            height: 6em;
+            width: 6em;
+        }
+        .links a {
+            color: skyblue;
+            padding: 1em;
+            margin: 0.5em auto;
+            width: 75%;
+            max-width: 680px;
+            text-align: center;
+            background-color: #282832;
+            -webkit-transition: 0.1s;
+            transition: 0.1s;
+        }
+        .links a:hover {
+            background-color: #31313e;
+        }
+        .home-button {
+            opacity: 70%;
+        }
+        .home-button img {
+            height: 2em;
+            width: 2em;
+        }
+        .home-button:hover {
+            opacity: 100%;
+        }
+        .video-container {
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16/9;
+            pointer-events: none;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: .1;
+        } 
+        .video-container iframe {
+            width: 300%;
+            height: 100%;
+            margin-left: -100%;
+        }

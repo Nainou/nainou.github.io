@@ -13,15 +13,15 @@ window.onmousemove=e=>{
         maxDelta=window.innerWidth/2;
     const percentage =(mouseDelta/maxDelta)*-100;
         nextPercentage=parseFloat(track.dataset.prevPercentage)+percentage;
-    nextPercentage=Math.min(nextPercentage,10);
-    nextPercentage=Math.max(nextPercentage, -110);
+    nextPercentage=Math.min(nextPercentage,0);
+    nextPercentage=Math.max(nextPercentage, -100);
     track.dataset.percentage=nextPercentage;
     track.animate({
         transform: `translate(${nextPercentage}%, -50%)`
-    }, {duration:1000, fill: "forwards"});
+    }, {duration:1500, fill: "forwards"});
     for(const image of track.getElementsByClassName("image")){
         image.animate({
             objectPosition: `${100+nextPercentage}% center`
-        }, {duration:1000,fill: "forwards"});
+        }, {duration:1500,fill: "forwards"});
     }
 }
