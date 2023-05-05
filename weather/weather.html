@@ -7,10 +7,18 @@
 </head>
 
 <body>
-  <h1>Weather Station</h1>
+  <div class="header">
+    <a class="home-button" id="home-button" href="https://nainou.github.io/">
+      <img src="../home-button.png">
+    </a>
+    <h1>Weather Station</h1>
+  </div>
+
   <div class="options">
-    <input id="lastvalues" type="button" onclick="fetchLastValues();" value="Lastest 50 values" title="Displays the latest 50 values from the weather station" />
-    <input id="temperature" type="button" onclick="fetchTemperature();" value="Temperature" title="Displays the latest 20 tenperature values from the weather station"/>
+    <input id="lastvalues" type="button" onclick="fetchLastValues();" value="Lastest 50 values"
+      title="Displays the latest 50 values from the weather station" />
+    <input id="temperature" type="button" onclick="fetchTemperature();" value="Temperature"
+      title="Displays the latest 20 tenperature values from the weather station" />
   </div>
 
   <div class="weather-container">
@@ -34,11 +42,13 @@
       <canvas id="myChart"></canvas>
 
       <div class="dropdown-container">
-        <select class="dropdown" id="valueDropDown" onchange="fetchDropdown();"title="Change the displayed reading type">
-          <option value="temperature"title="Displays the temperature">Temperature</option>
-          <option value="light"title="Displays the light reading">Light</option>
+        <select class="dropdown" id="valueDropDown" onchange="fetchDropdown();"
+          title="Change the displayed reading type">
+          <option value="temperature" title="Displays the temperature">Temperature</option>
+          <option value="light" title="Displays the light reading">Light</option>
         </select>
-        <select class="dropdown" id="timeDropDown" onchange="fetchDropdown();"title="Change the displayed reading timeframe">
+        <select class="dropdown" id="timeDropDown" onchange="fetchDropdown();"
+          title="Change the displayed reading timeframe">
           <option value="Now">Latest 20 readings</option>
           <option value="24">Last 24 hours</option>
           <option value="48">Last 48 hours</option>
