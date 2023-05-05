@@ -165,13 +165,8 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 8%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.calculations.show {
-  opacity: 1;
-}
 
 .home-button {
   opacity: 70%;
