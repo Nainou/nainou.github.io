@@ -31,7 +31,7 @@ async function createTable(date, time, value) {
 }
 
 async function fetchLastValues() {
-  fetch('http://webapi19sa-1.course.tamk.cloud/v1/weather/limit/50')
+  fetch('https://webapi19sa-1.course.tamk.cloud/v1/weather/limit/50')
     .then(response => response.json())
     .then(data => {
       tableBody.innerHTML = '';
@@ -80,7 +80,7 @@ async function fetchValue(dataType) {
   const valueDropDownValue = valueDropDown.options[valueDropDown.selectedIndex].value;
   const timeDropDownValue = timeDropDown.options[timeDropDown.selectedIndex].value;
 
-  let fetchURL = `http://webapi19sa-1.course.tamk.cloud/v1/weather/${dataType}`;
+  let fetchURL = `https://webapi19sa-1.course.tamk.cloud/v1/weather/${dataType}`;
   if (timeDropDownValue !== 'Now') {
     fetchURL += `/${timeDropDownValue}`;
   }
