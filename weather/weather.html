@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+
+<body>
+  <h1>Weather Station</h1>
+  <div class="options">
+    <input id="lastvalues" type="button" onclick="fetchLastValues();" value="Lastest 50 values" title="Displays the latest 50 values from the weather station" />
+    <input id="temperature" type="button" onclick="fetchTemperature();" value="Temperature" title="Displays the latest 20 tenperature values from the weather station"/>
+  </div>
+
+  <div class="weather-container">
+
+    <div id="table-container">
+      <table id="weather-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody id="weather-table-body">
+        </tbody>
+      </table>
+    </div>
+
+    <div id="chart-container">
+
+      <canvas id="myChart"></canvas>
+
+      <div class="dropdown-container">
+        <select class="dropdown" id="valueDropDown" onchange="fetchDropdown();"title="Change the displayed reading type">
+          <option value="temperature"title="Displays the temperature">Temperature</option>
+          <option value="light"title="Displays the light reading">Light</option>
+        </select>
+        <select class="dropdown" id="timeDropDown" onchange="fetchDropdown();"title="Change the displayed reading timeframe">
+          <option value="Now">Latest 20 readings</option>
+          <option value="24">Last 24 hours</option>
+          <option value="48">Last 48 hours</option>
+          <option value="72">Last 72 hours</option>
+          <option value="1week">Last week</option>
+          <option value="1month">Last month</option>
+        </select>
+
+      </div>
+      <div class="calculations" id="calculations">
+        <p id="mean"></p>
+        <p id="median"> </p>
+        <p id="mode"> </p>
+        <p id="range"></p>
+        <p id="standardDeviation"> </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
