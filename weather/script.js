@@ -216,13 +216,8 @@ async function createChart(data, dataType) {
 }
 
 async function fetchDropdown() {
-  const timeDropDownValue = timeDropDown.options[timeDropDown.selectedIndex].value;
   const valueDropDownValue = valueDropDown.options[valueDropDown.selectedIndex].value;
-  if (valueDropDownValue === 'temperature') {
-    fetchValue("temperature")
-  } else if (valueDropDownValue === 'light') {
-    fetchValue("light")
-  }
+  fetchValue(valueDropDownValue);
 }
 
 async function calculations(data, dataType) {
