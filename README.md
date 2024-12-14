@@ -1,3 +1,15 @@
+Page for sharing my socials and couple demos.
+
+Mandelbrot fractal:
+first version of mandelbrot fractal rendered using only javascript. Slow and small resolution, greyscale only.
+
+Mandelbrot fractal v2:
+Better version of mandelbrot fractal rendered using WEBGL and javascript. Has post-processing editing for HSL and RGB. Still kind of limited, can't zoom in too much.
+
+Cube:
+3D Cube rendered using javascript.
+
+Weather:
 This website displays the latest weather data collected by a weather station.
 It allows users to view the temperature, light, rain amount, humidity, wind direction,
 and wind speed over various timeframes, ranging from the latest 20 readings to the last month.
