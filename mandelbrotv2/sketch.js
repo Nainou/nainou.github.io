@@ -93,6 +93,8 @@ function updateLabel(slider, label, text) {
     label.html(text + slider.value());
 }
 
+
+
 function draw() {
     shader(shaderProgram);
 
@@ -108,6 +110,7 @@ function draw() {
     shaderProgram.setUniform('u_r_value', r_slider.value());
     shaderProgram.setUniform('u_g_value', g_slider.value());
     shaderProgram.setUniform('u_b_value', b_slider.value());
+    shaderProgram.setUniform('u_time', millis() / 1000.0);
 
     quad(-1, -1, 1, -1, 1, 1, -1, 1);
 

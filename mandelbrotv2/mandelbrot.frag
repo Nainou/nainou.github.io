@@ -36,27 +36,21 @@ void main() {
         }
         z = vec2(x, y);
     }
+
     if (smoothIteration == 0.0) {
         gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
     } else {
-        vec3 color = vec3(u_r_value, u_g_value, u_b_value);
-
         float hue = mod(u_hue + smoothIteration / float(maxIterations) * u_color_iteration, 1.0);
         float c = (1.0 - abs(2.0 * u_lightness - 1.0)) * u_saturation;
         float x = c * (1.0 - abs(mod(hue * 6.0, 2.0) - 1.0));
         float m = u_lightness - c / 2.0;
-        vec3 hslColor = (hue < 1.0 / 6.0) ? vec3(c, x, 0.0) :
-                        (hue < 2.0 / 6.0) ? vec3(x, c, 0.0) :
-                        (hue < 3.0 / 6.0) ? vec3(0.0, c, x) :
-                        (hue < 4.0 / 6.0) ? vec3(0.0, x, c) :
-                        (hue < 5.0 / 6.0) ? vec3(x, 0.0, c) :
-                                            vec3(c, 0.0, x);
-        hslColor = hslColor + vec3(m);
-
-        color.r = mix(color.r, hslColor.r, u_r_value);
-        color.g = mix(color.g, hslColor.g, u_g_value);
-        color.b = mix(color.b, hslColor.b, u_b_value);
-
+        vec3 color = (hue < 1.0 / 6.0) ? vec3(c, x, 0.0) :
+                     (hue < 2.0 / 6.0) ? vec3(x, c, 0.0) :
+                     (hue < 3.0 / 6.0) ? vec3(0.0, c, x) :
+                     (hue < 4.0 / 6.0) ? vec3(0.0, x, c) :
+                     (hue < 5.0 / 6.0) ? vec3(x, 0.0, c) :
+                                         vec3(c, 0.0, x);
+        color = color + vec3(m);
         gl_FragColor = vec4(color, 1.0);
     }
 }

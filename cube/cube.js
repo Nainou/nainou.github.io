@@ -182,23 +182,23 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('mousemove', (event) => {
-  if (event.buttons === 1) {
-    cube1.move(1, event.movementX * 0.01);
-    cube1.move(2, event.movementY * 0.01);
-  } else if (event.buttons === 2) {
-    cube1.move(3, event.movementX * 0.01);
-    cube1.move(3, event.movementY * 0.01);
-  }
+    if (event.buttons === 1) {
+        cube1.move(1, event.movementX * 0.01);
+        cube1.move(2, event.movementY * 0.01);
+    } else if (event.buttons === 2) {
+        cube1.move(3, event.movementX * 0.01);
+        cube1.move(3, event.movementY * 0.01);
+    }
 });
 
 document.addEventListener('wheel', (event) => {
-  if (event.deltaY > 0) {
-    cube1.changeFov(-4);
-  } else if (event.deltaY < 0) {
-    cube1.changeFov(4);
-  }
+    if (event.deltaY > 0) {
+        cube1.changeFov(-4);
+    } else if (event.deltaY < 0) {
+        cube1.changeFov(4);
+    }
 });
 
-document.addEventListener('contextmenu', function(e) {
+document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-  });
+});
