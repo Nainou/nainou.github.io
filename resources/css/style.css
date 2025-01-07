@@ -1,4 +1,4 @@
-@font-face { font-family: badgrunge; src: url('BAD GRUNGE.ttf'); } 
+@font-face { font-family: badgrunge; src: url('BAD GRUNGE.ttf'); }
 @font-face { font-family: badgrunge; font-weight: bold; src: url('BAD GRUNGE.ttf');}
 
 
@@ -6,7 +6,6 @@
         height: 100vh;
         background-color: black;
         margin: 0rem;
-        overflow: hidden;
 
       }
       #image-track > .image {
@@ -46,7 +45,7 @@
         }
         .fixed-header img{
           display: block;
-          margin: 0 auto; 
+          margin: 0 auto;
           width: 300px;;
         }
         #grid > .image {
@@ -84,7 +83,7 @@
         padding: 19px;
         width: 48%;
         }
-        
+
         .frame{
         text-align: center;
         padding: 19px;
@@ -112,7 +111,7 @@
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-orient: vertical; 
+            -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-flow: column;
                     flex-flow: column;
@@ -162,7 +161,7 @@
             bottom: 0;
             z-index: -1;
             opacity: .1;
-        } 
+        }
         .video-container iframe {
             width: 300%;
             height: 100%;
