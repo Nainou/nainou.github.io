@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="resources/css/style.css" />
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Nainou</title>
+    <title>~* Tino Ketola Homepage *~</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 
@@ -37,6 +37,16 @@
     </div>
     <script src="resources/js/particles.js"></script>
     <script src="js/app.js"></script>
+    <script >
+        let titlePos = 0;
+        const originalTitle = document.title;
+        setInterval(() => {
+            document.title = originalTitle.substring(titlePos) +
+                originalTitle.substring(0, titlePos);
+            titlePos = (titlePos + 1) % originalTitle.length;
+        }, 500);
+    </script>
+
 </body>
 
 </html>
